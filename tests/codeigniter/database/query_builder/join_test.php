@@ -24,7 +24,7 @@ class Join_test extends CI_TestCase {
 	{
 		$job_user = $this->db->select('job.id as job_id, job.name as job_name, user.id as user_id, user.name as user_name')
 							->from('job')
-							->join('user', 'user.id = job.id')
+							->join('UserModel', 'user.id = job.id')
 							->get()
 							->result_array();
 

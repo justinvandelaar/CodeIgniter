@@ -44,18 +44,18 @@ class Delete_test extends CI_TestCase {
 	public function test_delete_several_tables()
 	{
 		// Check initial record
-		$user4 = $this->db->where('id', 4)->get('user')->row();
+		$user4 = $this->db->where('id', 4)->get('UserModel')->row();
 		$job4 = $this->db->where('id', 4)->get('job')->row();
 
 		$this->assertEquals('Musician', $job4->name);
 		$this->assertEquals('Chris Martin', $user4->name);
 
 		// Do the delete
-		$this->db->delete(array('job', 'user'), array('id' => 4));
+		$this->db->delete(array('job', 'UserModel'), array('id' => 4));
 
 		// Check the record
 		$job4 = $this->db->where('id', 4)->get('job');
-		$user4 = $this->db->where('id', 4)->get('user');
+		$user4 = $this->db->where('id', 4)->get('UserModel');
 
 		$this->assertEmpty($job4->result_array());
 		$this->assertEmpty($user4->result_array());

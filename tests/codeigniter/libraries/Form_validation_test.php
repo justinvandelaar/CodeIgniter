@@ -414,16 +414,16 @@ class Form_validation_test extends CI_TestCase {
 		$config = array(
 			'pass' => array(
 				array(
-					'field' => 'username',
-					'label' => 'user',
-					'rules' => 'alpha_numeric'
+                    'field' => 'username',
+                    'label' => 'UserModel',
+                    'rules' => 'alpha_numeric'
 				)
 			),
 			'fail' => array(
 				array(
-					'field' => 'username',
-					'label' => 'user',
-					'rules' => 'alpha'
+                    'field' => 'username',
+                    'label' => 'UserModel',
+                    'rules' => 'alpha'
 				)
 			)
 		);

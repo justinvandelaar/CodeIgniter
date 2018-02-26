@@ -42,14 +42,14 @@ class Truncate_test extends CI_TestCase {
 	public function test_truncate_with_from()
 	{
 		// Check initial record
-		$users = $this->db->get('user')->result_array();
+		$users = $this->db->get('UserModel')->result_array();
 		$this->assertEquals(4, count($users));
 
 		// Do the empty
-		$this->db->from('user')->truncate();
+		$this->db->from('UserModel')->truncate();
 
 		// Check the record
-		$users = $this->db->get('user');
+		$users = $this->db->get('UserModel');
 		$this->assertEmpty($users->result_array());
 	}
 

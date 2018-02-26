@@ -56,7 +56,7 @@ class Mock_Database_Schema_Skeleton {
 	 */
 	public static function create_tables()
 	{
-		// User Table
+		// UserModel Table
 		self::$forge->add_field(array(
 			'id' => array(
 				'type' => 'INTEGER',
@@ -76,7 +76,7 @@ class Mock_Database_Schema_Skeleton {
 			)
 		));
 		self::$forge->add_key('id', TRUE);
-		self::$forge->create_table('user', TRUE);
+		self::$forge->create_table('UserModel', TRUE);
 
 		// Job Table
 		self::$forge->add_field(array(
@@ -122,19 +122,19 @@ class Mock_Database_Schema_Skeleton {
 	{
 		// Job Data
 		$data = array(
-			'user' => array(
+            'UserModel' => array(
 				array('id' => 1, 'name' => 'Derek Jones', 'email' => 'derek@world.com', 'country' => 'US'),
 				array('id' => 2, 'name' => 'Ahmadinejad', 'email' => 'ahmadinejad@world.com', 'country' => 'Iran'),
 				array('id' => 3, 'name' => 'Richard A Causey', 'email' => 'richard@world.com', 'country' => 'US'),
 				array('id' => 4, 'name' => 'Chris Martin', 'email' => 'chris@world.com', 'country' => 'UK')
 			),
-			'job' => array(
+            'job' => array(
 				array('id' => 1, 'name' => 'Developer', 'description' => 'Awesome job, but sometimes makes you bored'),
 				array('id' => 2, 'name' => 'Politician', 'description' => 'This is not really a job'),
 				array('id' => 3, 'name' => 'Accountant', 'description' => 'Boring job, but you will get free snack at lunch'),
 				array('id' => 4, 'name' => 'Musician', 'description' => 'Only Coldplay can actually called Musician')
 			),
-			'misc' => array(
+            'misc' => array(
 				array('id' => 1, 'key' => '\\xxxfoo456', 'value' => 'Entry with \\xxx'),
 				array('id' => 2, 'key' => '\\%foo456', 'value' => 'Entry with \\%'),
 				array('id' => 3, 'key' => 'spaces and tabs', 'value' => ' One  two   three	tab')

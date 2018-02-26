@@ -24,7 +24,7 @@ class Distinct_test extends CI_TestCase {
 	{
 		$users = $this->db->select('country')
 					->distinct()
-					->get('user')
+					->get('UserModel')
 					->result_array();
 
 		$this->assertEquals(3, count($users));
